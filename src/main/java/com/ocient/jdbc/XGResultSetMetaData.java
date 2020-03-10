@@ -75,7 +75,7 @@ public class XGResultSetMetaData implements ResultSetMetaData
 		{
 			return "java.lang.Boolean";
 		}
-		else if (type.equals("DECIMAL"))
+		else if (type.startsWith("DECIMAL"))
 		{
 			return "java.math.BigDecimal";
 		}	
@@ -147,7 +147,7 @@ public class XGResultSetMetaData implements ResultSetMetaData
 		{
 			retval = 33;
 		}
-		else if (type.equals("DECIMAL"))
+		else if (type.startsWith("DECIMAL"))
 		{
 			retval = 33; //max precision + '.' + "-"
 		}
@@ -227,7 +227,7 @@ public class XGResultSetMetaData implements ResultSetMetaData
 		{
 			return java.sql.Types.BINARY;
 		}
-		else if (type.equals("DECIMAL"))
+		else if (type.startsWith("DECIMAL"))
 		{
 			return java.sql.Types.DECIMAL;
 		}	
@@ -299,7 +299,7 @@ public class XGResultSetMetaData implements ResultSetMetaData
 		{
 			return 128 *  1024;
 		}
-		else if (type.equals("DECIMAL"))
+		else if (type.startsWith("DECIMAL"))
 		{
 			return 31;
 		}	
